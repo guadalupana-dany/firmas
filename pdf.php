@@ -1,9 +1,14 @@
 
 <?php
-
+/**
+ * Desarrollado por Dany Diaz
+ * Desarrollador Web
+ */
+//INCLUIR LA CLASE CONEXION
 include_once("conexion.php");
 // header('Content-Type: application/json');
 
+//OBTENEMOS LAS FIRMAS A IMPRIMIR QUE SON 16
         $getFirmas = "SELECT  f.id,f.asociado_id,f.estado,a.nombre,a.cif FROM `firma` as f inner join  asociado as a on f.asociado_id=a.id where f.estado = 1";
         $query = mysqli_query($mysqli,$getFirmas);
 
@@ -98,7 +103,9 @@ include_once("conexion.php");
           <td></td>
         </tr>
         <?php  
-            while($row = mysqli_fetch_assoc($query)){        
+           $contador = 0;
+            while($row = mysqli_fetch_assoc($query)){   
+           $contador ++;     
         ?>
         <tr >
             <td style="width:50px;font-size:8px"><b><?=$row['id']?></b></td>
@@ -160,10 +167,78 @@ include_once("conexion.php");
         </tr>
         <?php  
 
+              //CUANDO CADA FIRMA RECORRA EL CICLO VA CAMBIANDO DE ESTADO
                 $update = "update firma set estado = 2 where id = ".$row['id'];
                 mysqli_query($mysqli,$update);
 
-            }      
-        ?>
+            } 
+            
+       if($contador < 16 ){    
+         
+          for($i = 0; $i < $contador;$i++){          
+      ?>
+       <tr >
+            <td style="width:50px;font-size:8px"><b>*******************************</b></td>
+            <td style="width:300px;font-size:8px"><b>******************************</b></td>
+            <td style="width:100px;font-size:8px"><b>******************************</b></td>
+            <th><b>******************************</b></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> 
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> 
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> 
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      <?php
+          }
+       }
+      ?>
      </table>
 </div>
