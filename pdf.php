@@ -173,9 +173,11 @@ include_once("conexion.php");
 
             } 
             
-       if($contador < 16 ){    
+       if($contador < 16 ){  
          
-          for($i = 0; $i < $contador;$i++){          
+        $contadorReal = 16 - $contador;
+         
+          for($i = 0; $i < $contadorReal;$i++){          
       ?>
        <tr >
             <td style="width:50px;font-size:8px"><b>*******************************</b></td>
