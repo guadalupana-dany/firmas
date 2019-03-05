@@ -180,21 +180,34 @@ include_once("conexion.php");
           for($i = 0; $i < $contadorReal;$i++){          
       ?>
        <tr >
-            <th><b>************************************************************************************************************************</b></th>
+            <td style="width:50px;font-size:8px"><b>****</b></td>
+            <td style="width:300px;font-size:8px"><b>******************************</b></td>
+            <td style="width:100px;font-size:8px"><b>******************************</b></td>
+            <th><b>******************************</b></th>
         </tr>
         <tr>
+          <td></td>
+          <td></td>
           <td></td>
         </tr>
         <tr>
           <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
+          <td></td>
+          <td></td>
           <td></td>
         </tr> 
         <tr>
           <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
+          <td></td>
+          <td></td>
           <td></td>
         </tr>
         
@@ -205,15 +218,23 @@ include_once("conexion.php");
         </tr> 
         <tr>
           <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
+          <td></td>
+          <td></td>
           <td></td>
         </tr>
         
         <tr>
           <td></td>
+          <td></td>
+          <td></td>
         </tr> 
         <tr>
+          <td></td>
+          <td></td>
           <td></td>
         </tr>
 
